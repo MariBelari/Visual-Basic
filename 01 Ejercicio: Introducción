@@ -1,0 +1,48 @@
+///////////////////////////////////////////////////////////////////////////////////////////
+Sub practica()
+
+'INSERTAR COMENTARIOS
+
+Range("C50:D50").Value = "Informe"
+Range("C52", "D60").Value = Application.WorksheetFunction.RandBetween(24, 65)
+
+End Sub
+
+///////////////////////////////////////////////////////////////////////////////////////////
+Sub asignar_valor()
+Dim frecuencia As Double 'Declarar variables
+Dim severidad As Double
+Dim cartera As String
+frecuencia = 6789
+severidad = 3458000.96
+cartera = "Incendios"
+Range("F51").Value = "Informe de los Siniestros"
+Range("F52").Value = "Ramo de: " & cartera
+Range("F53").Value = "La frecuencia de los siniestros en la cartera es de: " & frecuencia
+Range("F54").Value = "La severidad de los siniestros en la cartera es de: " & severidad
+End Sub
+
+///////////////////////////////////////////////////////////////////////////////////////////
+Sub asignar_valor1()
+Dim frecuencia As Double 'Declarar variables
+Dim severidad As Double
+Dim cartera As String
+frecuencia = 6789
+severidad = 3458000.96
+cartera = "Incendios"
+Range("F51").Value = "Informe de los Siniestros"
+Range("F52").Value = "Ramo de: "
+Range("F53").Value = "La frecuencia de los siniestros en la cartera es de: "
+Range("F54").Value = "La severidad de los siniestros en la cartera es de: "
+Range("G52").Value = cartera 'Celdas contiguas
+Range("G53").Value = frecuencia
+Range("G54").Value = severidad
+
+
+Range("F51:G54").Select 'Formato de fuente
+Selection.Font.Bold = True
+Range("F51:G54").Borders.Color = RGB(186, 40, 75) 'Color de borde
+
+End Sub
+
+///////////////////////////////////////////////////////////////////////////////////////////
